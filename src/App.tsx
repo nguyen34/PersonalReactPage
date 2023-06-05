@@ -17,7 +17,7 @@ function App() {
         onSelectItem={handleSelectItem}
       />
       {alertVisible && (
-        <Alert color="primary" onClick={() => setAlertVisibility(false)}>
+        <Alert color="primary" onClose={() => setAlertVisibility(false)}>
           <span>Hello World</span>
         </Alert>
       )}

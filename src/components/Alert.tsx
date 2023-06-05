@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 
 interface AlertProps {
   children: ReactNode;
-  onClick: () => void;
+  onClose: () => void;
   color?:
     | "primary"
     | "secondary"
@@ -14,7 +14,7 @@ interface AlertProps {
     | "dark";
 }
 
-const Alert = ({ children, onClick, color = "primary" }: AlertProps) => {
+const Alert = ({ children, onClose, color = "primary" }: AlertProps) => {
   return (
     <div
       className={"alert alert-" + color + " alert-dismissible fade show"}
@@ -26,7 +26,7 @@ const Alert = ({ children, onClick, color = "primary" }: AlertProps) => {
         className="btn-close"
         data-bs-dismiss="alert"
         aria-label="Close"
-        onClick={onClick}
+        onClick={onClose}
       ></button>
     </div>
   );
